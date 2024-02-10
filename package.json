@@ -1,5 +1,5 @@
 {
-  "name": "maraApp",
+  "name": "fridgelink",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -24,9 +24,10 @@
     "@types/react": "^18.2.6",
     "@types/react-test-renderer": "^18.0.0",
     "babel-jest": "^29.6.3",
-    "eslint": "^8.19.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
     "jest": "^29.6.3",
-    "prettier": "2.8.8",
+    "prettier": "^3.2.5",
     "react-test-renderer": "18.2.0",
     "typescript": "5.0.4"
   },
