@@ -1,0 +1,20 @@
+const COLOR = {
+  PRIMARY1: '#52C5A6',
+  PRIMARY2: '#3CAA8D',
+  PRIMARY3: '#0C5E5A',
+  POINT1: '#FFE377',
+  POINT2: '#FF8436',
+  POINT3: '#CA3F13',
+  POINT4: '#FB2414',
+  GRAY1: '#F1F2F4',
+  GRAY2: '#E0E1E6',
+  GRAY3: '#CCCFD7',
+  GRAY4: '#B5B9C5',
+  GRAY5: '#9299AA',
+  GRAY6: '#6E768C',
+  GRAY7: '#4E5464',
+  GRAY8: '#363A45',
+  WHITE: '#FFFFFF',
+  BALCK: '#000000',
+};
+export default COLOR;
