@@ -1,39 +1,17 @@
-import {Image, StyleSheet, View} from 'react-native';
-
-import Button from '../../components/common/Button';
-import COLOR from '../../utils/theme/colors';
+import COLOR from '@utils/theme/colors';
+import { OnboardingStep1ScreenProps } from '@screens/types';
+import OnboardingTemplate from '@components/screens/OnboardingTemplate';
 import React from 'react';
-import {STATIC_IMG_URI} from '../../utils/constants';
-import StepLabel from '../../components/common/StepLabel';
+import { useNavigation } from '@react-navigation/native';
 
-const Step1 = () => {
+const ONBOARDING_CURPAGE = 1;
+
+const Step1:React.FC<OnboardingStep1ScreenProps> = () => {
+  const navigation  = useNavigation<OnboardingStep1ScreenProps['navigation']>();
+  
 	return (
-		<View style={styles.container}>
-			<StepLabel curPage={1} totalPage={3} />
-			<Image style={styles.image} source={{uri: `${STATIC_IMG_URI}/img_onboarding_2.png`}} />
-			<View style={styles.buttonWrapper}>
-				<Button variant={'clickable'} label={'다음'} onPress={() => null} />
-				<Button variant={'skippable'} label={'건너뛰기'} onPress={() => null} />
-			</View>
-		</View>
+    <OnboardingTemplate onNextStep={()=> navigation.navigate('Step2') } curPage={ONBOARDING_CURPAGE}/>
 	);
 };
-
-const styles = StyleSheet.create({
-	container: {
-		height: '100%',
-		alignItems: 'center',
-		justifyContent: 'center',
-		backgroundColor: COLOR.PRIMARY2,
-	},
-	buttonWrapper: {
-		width: '100%',
-		paddingHorizontal: 12,
-	},
-	image: {
-		aspectRatio: 320 / 529,
-		width: '85%',
-	},
-});
 
 export default Step1;

@@ -1,13 +1,16 @@
-import Main from './screens/Main';
-import { NavigationContainer } from '@react-navigation/native';
+import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
+import RootStack from '@screens';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
 
 function App(): React.JSX.Element {
-  return (
-    <NavigationContainer>
-      <Main />
-    </NavigationContainer>
-  );
+	return (
+		<SafeAreaProvider>
+			<NavigationContainer>
+				<RootStack />
+			</NavigationContainer>
+		</SafeAreaProvider>
+	);
 }
 
 export default App;
