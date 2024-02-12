@@ -17,17 +17,17 @@ export type MainScreenProps = NativeStackScreenProps<RootStackParamList, 'Main'>
 
 export type OnboardingScreenProps = NativeStackScreenProps<RootStackParamList, 'Onboarding'>;
 
-export type OnboardingStep1ScreenProps =CompositeScreenProps<
-NativeStackScreenProps<RootStackParamList>,
-NativeStackScreenProps<OnboardingParams, 'Step1'>
->
+export type OnboardingStep1ScreenProps = CompositeScreenProps<
+	NativeStackScreenProps<OnboardingParams, 'Step1'>,
+	NativeStackScreenProps<RootStackParamList>
+>;
 
-export type OnboardingStep2ScreenProps =CompositeScreenProps<
-NativeStackScreenProps<RootStackParamList>,
-NativeStackScreenProps<OnboardingParams, 'Step3'>
->
+export type OnboardingStep2ScreenProps = CompositeScreenProps<
+	NativeStackScreenProps<OnboardingParams, 'Step2'>,
+	NativeStackScreenProps<RootStackParamList>
+>;
 
-export type OnboardingStep3ScreenProps =CompositeScreenProps<
-NativeStackScreenProps<RootStackParamList>,
-NativeStackScreenProps<OnboardingParams, 'Step3'>
->
+export type OnboardingStep3ScreenProps = CompositeScreenProps<
+	NativeStackScreenProps<OnboardingParams, 'Step3'>,
+	NativeStackScreenProps<RootStackParamList>
+>;
