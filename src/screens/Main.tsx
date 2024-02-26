@@ -9,8 +9,7 @@ import {useNavigation} from '@react-navigation/native';
 const Main: React.FC<MainScreenProps> = () => {
 	const navigation = useNavigation<MainScreenProps['navigation']>();
 
-	// TODO URI 추가
-	const uri = '';
+	const URI = 'https://fridgelink.site';
 
 	useEffect(() => {
 		async function checkOnboardingViewed() {
@@ -24,7 +23,7 @@ const Main: React.FC<MainScreenProps> = () => {
 
 	return (
 		<SafeAreaView style={{flex: 1}} edges={['top']}>
-			<WebView source={{uri}} />
+			<WebView source={{uri: URI}} />
 		</SafeAreaView>
 	);
 };
